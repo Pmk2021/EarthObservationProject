@@ -9,6 +9,7 @@ __pycache__/
 # Images
 *.jpeg
 ipeo_hurricane_for_students/
+*.zip
 
 # Distribution / packaging
 .Python
