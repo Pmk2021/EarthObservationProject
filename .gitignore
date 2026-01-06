@@ -6,6 +6,15 @@ __pycache__/
 # C extensions
 *.so
 
+# txt files
+.txt
+
+# Resnet models
+best_resnet18.pt
+
+# MacOS
+.DS_Store
+
 # Images
 *.jpeg
 ipeo_hurricane_for_students/
