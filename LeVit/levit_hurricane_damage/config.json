@@ -1,0 +1,67 @@
+{
+  "architectures": [
+    "LevitForImageClassification"
+  ],
+  "attention_ratio": [
+    2,
+    2,
+    2
+  ],
+  "depths": [
+    2,
+    3,
+    4
+  ],
+  "down_ops": [
+    [
+      "Subsample",
+      16,
+      8,
+      4,
+      2,
+      2
+    ],
+    [
+      "Subsample",
+      16,
+      16,
+      4,
+      2,
+      2
+    ],
+    [
+      ""
+    ]
+  ],
+  "drop_path_rate": 0,
+  "dtype": "float32",
+  "hidden_sizes": [
+    128,
+    256,
+    384
+  ],
+  "image_size": 224,
+  "initializer_range": 0.02,
+  "kernel_size": 3,
+  "key_dim": [
+    16,
+    16,
+    16
+  ],
+  "mlp_ratio": [
+    2,
+    2,
+    2
+  ],
+  "model_type": "levit",
+  "num_attention_heads": [
+    4,
+    6,
+    8
+  ],
+  "num_channels": 3,
+  "padding": 1,
+  "patch_size": 16,
+  "stride": 2,
+  "transformers_version": "4.57.3"
+}
