@@ -12,9 +12,6 @@ __pycache__/
 # .DS_Store files
 .DS_Store
 
-# Resnet models
-best_resnet18.pt
-
 # ResNet training
 Izar Training/
 
