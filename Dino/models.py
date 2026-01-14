@@ -55,10 +55,10 @@ classifier = nn.Sequential(
     nn.Linear(hidden_dim, 256),
     nn.GELU(),
     nn.Dropout(0.3),
-    nn.Linear(256, num_classes)    
+    nn.Linear(256, 2)    
 ).to(DEVICE)
 
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(
-    classifier.parameters(), lr=LR, weight_decay=1e-5
+    classifier.parameters(), lr=0.001, weight_decay=1e-5
 )
