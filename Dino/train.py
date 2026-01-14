@@ -12,7 +12,7 @@ from torchvision.transforms import v2
 from transformers import Dinov2Model, AutoImageProcessor
 from sklearn.metrics import accuracy_score, f1_score
 
-from dataset import Preprocessing_Transforms, DinoDataset
+from Dino.dataset import Preprocessing_Transforms, DinoDataset
 from EarthObservationProject.EarthObsoFinal.EarthObservationProject.Dino.models import extract_dino_features, backbone
 
 ### Configuration

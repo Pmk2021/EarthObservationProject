@@ -12,17 +12,21 @@ from torchvision.transforms import v2
 from transformers import Dinov2Model, AutoImageProcessor
 from sklearn.metrics import accuracy_score, f1_score
 
-from dataset import Preprocessing_Transforms, DinoDataset
+from Dino.dataset import Preprocessing_Transforms, DinoDataset
 
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 ### Initialiate DINO backbone
 MODEL_NAME = "rgydigital/dinov2-small"
-processor = AutoImageProcessor.from_pretrained(MODEL_NAME)
+
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 backbone = Dinov2Model.from_pretrained(MODEL_NAME).to(DEVICE)
 backbone.eval()
+
+hidden_dim = backbone.config.hidden_size
+
 
 def extract_dino_features(dataset, cache_path, device = "cpu", batch_size=1):
     if cache_path.exists():

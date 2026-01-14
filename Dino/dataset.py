@@ -6,6 +6,9 @@ from torchvision.transforms import v2
 
 from transformers import Dinov2Model, AutoImageProcessor
 
+MODEL_NAME = "rgydigital/dinov2-small"
+processor = AutoImageProcessor.from_pretrained(MODEL_NAME)
+
 Preprocessing_Transforms = v2.Compose([
 
     v2.Resize((224, 224)),
