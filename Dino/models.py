@@ -33,7 +33,7 @@ def extract_dino_features(dataset, cache_path, device = "cpu", batch_size=1):
         print(f"Loading cached features from {cache_path}")
         return torch.load(cache_path)
 
-    loader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False)
+    loader = DataLoader(dataset, batch_size=batch_size, shuffle=False)
     feats, labels = [], []
 
     with torch.no_grad():
