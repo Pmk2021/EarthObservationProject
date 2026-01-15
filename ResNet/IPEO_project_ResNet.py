@@ -30,11 +30,10 @@ std  = [0.229, 0.224, 0.225]
 
 train_transforms = transforms.Compose([
     transforms.RandomResizedCrop(224),
-    transforms.RandomGrayscale(),
     transforms.RandomHorizontalFlip(),
     transforms.RandomVerticalFlip(),
+    transforms.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.05),
     transforms.GaussianBlur(kernel_size=5, sigma=(0.1, 2.0)),
-    transforms.ColorJitter(brightness=0.5, contrast=0.5, saturation=0.5, hue=0.5),
     transforms.ToTensor(),
     PoissonNoise(lam=30.0),
     transforms.Normalize(mean, std),
