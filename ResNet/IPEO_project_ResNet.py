@@ -209,7 +209,7 @@ def main():
     model.load_state_dict(torch.load("best_resnet18.pt", map_location=DEVICE))
     test_loss, test_acc, test_f1 = evaluate(model, test_loader, criterion)
 
-    print(f"TEST → loss={test_loss:.4f}, acc={test_acc:.3f}, f1={test_f1:.3f}", flush=True)
+    print(f"TEST : loss={test_loss:.4f}, acc={test_acc:.3f}, f1={test_f1:.3f}", flush=True)
 
 
 if __name__ == "__main__":
