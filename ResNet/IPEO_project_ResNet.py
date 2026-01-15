@@ -1,4 +1,4 @@
-import os
+# -----Imports-----
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, WeightedRandomSampler
@@ -6,8 +6,8 @@ from torchvision import transforms
 from torchvision.models import resnet18, ResNet18_Weights
 from sklearn.metrics import accuracy_score, f1_score
 import csv
-from pathlib import Path
 
+# Custom dataset
 from dataset import Hurricane, PoissonNoise
 
 
