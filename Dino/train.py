@@ -1,5 +1,6 @@
+import sys
 import os
-
+sys.path.append(os.path.abspath("../Dino"))
 from pathlib import Path
 from tqdm import tqdm
 
@@ -13,7 +14,7 @@ from transformers import Dinov2Model, AutoImageProcessor
 from sklearn.metrics import accuracy_score, f1_score
 
 from Dino.dataset import Preprocessing_Transforms, DinoDataset
-from EarthObservationProject.EarthObsoFinal.EarthObservationProject.Dino.models import extract_dino_features, backbone
+from Dino.models import extract_dino_features, backbone
 
 ### Configuration
 DATA_DIR = Path("ipeo_hurricane_for_students/train")
@@ -22,7 +23,7 @@ VAL_DIR = Path("ipeo_hurricane_for_students/validation")
 BATCH_SIZE = 8
 NUM_EPOCHS = 50
 LR = 1e-5
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+DEVICE = "cpu"
 
 CACHE_DIR = Path("cached_features")
 CACHE_DIR.mkdir(exist_ok=True)

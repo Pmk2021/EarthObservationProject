@@ -20,7 +20,7 @@ from tqdm import tqdm
 ### Initialiate DINO backbone
 MODEL_NAME = "rgydigital/dinov2-small"
 
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+DEVICE ="cpu"
 
 backbone = Dinov2Model.from_pretrained(MODEL_NAME).to(DEVICE)
 backbone.eval()

@@ -18,7 +18,7 @@ Preprocessing_Transforms = v2.Compose([
 
 
 class DinoDataset(torch.utils.data.Dataset):
-    def __init__(self, root, transform, n_crops):
+    def __init__(self, root, transform, n_crops=1):
         self.base = datasets.ImageFolder(root)
         self.transform = transform
         self.n_crops = n_crops
