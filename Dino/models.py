@@ -54,7 +54,7 @@ def extract_dino_features(dataset, cache_path, device = "cpu", batch_size=1):
 classifier = nn.Sequential(
     nn.Linear(hidden_dim, 256),
     nn.GELU(),
-    nn.Dropout(0.3),
+    nn.Dropout(0.2),
     nn.Linear(256, 2)    
 ).to(DEVICE)
 
