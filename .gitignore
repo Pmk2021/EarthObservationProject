@@ -10,7 +10,6 @@ __pycache__/
 .DS_Store
 
 # Images
-*.jpeg
 ipeo_hurricane_for_students/
 
 # Distribution / packaging
